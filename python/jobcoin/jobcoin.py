@@ -130,9 +130,10 @@ def withdrawal(withdrawal_account, withdrawal_amount, post_transaction):
 
 if __name__=='__main__':
     print(API_ADDRESS_URL)
-    mixer(['Alice'],API_ADDRESS_URL,API_TRANSACTIONS_URL )
-    withdrawal('Alice',10,API_TRANSACTIONS_URL)
-
+    mixer(sys.argv[1],API_ADDRESS_URL,API_TRANSACTIONS_URL )
+    withdrawal(sys.argv[2],sys.argv[3],API_TRANSACTIONS_URL)
+    #mixer(['Alice'],API_ADDRESS_URL,API_TRANSACTIONS_URL )
+    #withdrawal('Alice',10,API_TRANSACTIONS_URL)
 
 
 
